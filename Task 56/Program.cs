@@ -9,28 +9,6 @@
 Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 */
 
-void NumberRowMinSumElements(int[,] matrix)
-{
-    int minRow = 0;
-    int minSumRow = 0;
-    int sumRow = 0;
-    for (int i = 0; i < matrix.GetLength(1); i++)
-    {
-        minRow += matrix[0, i];
-    }
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++) sumRow += matrix[i, j];
-        if (sumRow < minRow)
-        {
-            minRow = sumRow;
-            minSumRow = i;
-        }
-        sumRow = 0;
-    }
-    Console.WriteLine($"\n{minSumRow + 1} - строкa с наименьшей суммой ({minRow}) элементов ");
-}
-
 void InputMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -48,6 +26,28 @@ void PrintMatrix(int[,] matrix)
             Console.Write($"{matrix[i, j]} \t");
         Console.WriteLine();
     }
+}
+
+void NumberRowMinSumElements(int[,] matrix)
+{
+    int minRow = 0;
+    int minSumRow = 0;
+    int sumRow = 0;
+    for (int i = 0; i < matrix.GetLength(1); i++)
+    {
+        minRow += matrix[0, i];
+    }
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++) sumRow += matrix[i, j];
+            if (sumRow < minRow)
+            {
+                minRow = sumRow;
+                minSumRow = i;
+            }
+            sumRow = 0;
+        }
+    Console.WriteLine($"\n{minSumRow + 1} - строкa с наименьшей суммой ({minRow}) элементов ");
 }
 
 Console.Clear();
