@@ -13,6 +13,7 @@ Console.Clear();
 int[,,] array3D = new int[2, 2, 2];
 FillArray(array3D);
 PrintIndex(array3D);
+Console.WriteLine();
 
 void PrintIndex(int[,,] array)
 {
@@ -44,3 +45,4 @@ void FillArray(int[,,] array)
         }
     }
 }
+
