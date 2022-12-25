@@ -7,11 +7,7 @@
 10 09 08 07
 */
 
-Console.Clear();
-int len = 4;
-int[,] table = new int[len, len];
-FillArraySpiral(table, len);
-PrintArray(table);
+
 
 void FillArraySpiral(int[,] array, int n)
 {
@@ -46,4 +42,8 @@ void PrintArray(int[,] array)
     }
 }
 
- 
+Console.Clear();
+int len = 4;
+int[,] table = new int[len, len];
+FillArraySpiral(table, len);
+PrintArray(table);
