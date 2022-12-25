@@ -14,15 +14,11 @@ int columns = ReadInt("Введите количество столбцов: ");
 int[,] array = new int[rows, columns];
 int[,] secondArray = new int[rows, columns];
 int[,] resultArray = new int[rows, columns];
-
 FillArrayRandom(array);
 PrintArray(array);
-
 Console.WriteLine();
-
 FillArrayRandom(secondArray);
 PrintArray(secondArray);
-
 Console.WriteLine();
 
 if (array.GetLength(0) != secondArray.GetLength(1))
